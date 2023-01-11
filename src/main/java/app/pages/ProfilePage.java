@@ -10,6 +10,11 @@ public class ProfilePage extends BasePage {
 
     public SelenideElement locatorLogout = $x("//*[text()='Logout']");
 
+    public SelenideElement createAccount = $x("//a [@href ='/register/']");
+
+
+
+
     public ProfilePage(String pageUrl) {
         super(pageUrl);
     }
