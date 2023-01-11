@@ -8,6 +8,8 @@ public class ProfilePage extends BasePage {
 
     public SelenideElement headerLocator = $x("//h1");
 
+    public SelenideElement locatorLogout = $x("//*[text()='Logout']");
+
     public ProfilePage(String pageUrl) {
         super(pageUrl);
     }
