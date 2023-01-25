@@ -12,5 +12,15 @@ public class ExampleTest extends A_BaseTest
         app.loginPage.login("admin1", "admin1");
         app.profilePage.headerLocator.shouldBe(visible, ofSeconds(10));
     }
+
+    @Test
+    public void matchingTestName() {
+        app.loginPage.open();
+        app.loginPage.login("admin1", "admin1");
+        app.profilePage.headerLocator.shouldBe(visible, ofSeconds(10));
+        app.nameInProfile.nameInProfile.shouldBe(visible);
+        
+    }
 }
+
 

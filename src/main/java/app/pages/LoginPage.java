@@ -10,6 +10,8 @@ public class LoginPage extends BasePage {
     public SelenideElement passwordField = $x("//input[@name='password']");
     public SelenideElement signInButton = $x("//input[@type='submit']");
 
+    public SelenideElement nameInProfile = $x("//*[contains(text(),'admin1')]");
+
     public LoginPage(String pageUrl) {
         super(pageUrl);
     }
