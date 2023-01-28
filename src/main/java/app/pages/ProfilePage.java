@@ -12,9 +12,6 @@ public class ProfilePage extends BasePage {
 
     public SelenideElement createAccount = $x("//a[@href ='/register/']");
 
-
-
-
     public SelenideElement nameInProfile = $x("//*[contains(text(),'admin1')]");
 
     public SelenideElement name2 = $x("//div[@class = 'caption']/child::h4");
