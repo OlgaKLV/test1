@@ -4,7 +4,6 @@ import app.pages.LoginPage;
 import app.pages.ProfilePage;
 
 public class App {
-
     public LoginPage loginPage;
     public ProfilePage profilePage;
 
