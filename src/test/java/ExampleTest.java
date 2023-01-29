@@ -20,15 +20,35 @@ public class ExampleTest extends A_BaseTest
         app.profilePage.locatorLogout.click();
     }
 
-        @Test
-        public void checkСreateAccount() {
+    @Test
+    public void checkCreateAccount() {
         app.loginPage.open();
         app.loginPage.login("admin1", "admin1");
-        app.profilePage.headerLocator.shouldBe(visible, ofSeconds(10));
-        app.profilePage.locatorLogout.shouldBe(visible, ofSeconds(10));
-        app.profilePage.locatorLogout.click();
-        app.profilePage.createAccount.shouldBe(visible, ofSeconds(10));
-        app.profilePage.createAccount.click();
+        app.profilePage.locatorLogout
+                .shouldBe(visible, ofSeconds(10))
+                .click();
+        app.profilePage.createAccount
+                .shouldBe(visible, ofSeconds(10));
+    }
+    @Test
+    public void tabReddit(){
+        app.loginPage.open();
+        app.loginPage.login("admin1", "admin1");
+        app.profilePage.tabReddit
+                .shouldBe(visible, ofSeconds(10))
+                .click();
+    }
+    @Test
+    public void checkRedditAccounts(){
+        app.loginPage.open();
+        app.loginPage.login("admin1", "admin1");
+        app.profilePage.tabReddit
+                .shouldBe(visible, ofSeconds(10))
+                .click();
+        app.profilePage.checkRedditAccounts
+                .shouldBe(visible, ofSeconds(10))
+                .click();
     }
 }
+
 
