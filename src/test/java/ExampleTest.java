@@ -60,6 +60,15 @@ public class ExampleTest extends A_BaseTest
         app.profilePage.name2.shouldHave(text("admin1 "));
 
     }
+
+    @Test
+    public void buttonLegacyAllies() {
+        app.loginPage.open();
+        app.loginPage.login("admin1", "admin1");
+        app.profilePage.buttonLegacyAllies
+                .shouldBe(visible, ofSeconds(10))
+                .click();
+    }
 }
 
 
